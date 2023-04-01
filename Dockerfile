@@ -6,6 +6,7 @@ RUN npm install -g npm@latest
 RUN npm -v
 RUN apt update \
     && apt install -y --force-yes zip python3 make g++ \
+    && apt install -y python-is-python3 \
     && npm i \
     && apt remove --purge -y --force-yes python make g++ \
     && apt-get autoremove -y  \
